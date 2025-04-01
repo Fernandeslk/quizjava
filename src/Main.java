@@ -4,7 +4,6 @@ public class Main {
     Cabeçalho cabecalho = new Cabeçalho();
     Questao quiz = new Questao();
 
-
     cabecalho.infos();
 
     quiz.escrevaQuestao();
