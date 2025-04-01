@@ -1,4 +1,4 @@
-public class Cabeçalho {
+public class Cabecalho {
     public void infos() {
 
         System.out.println("//////");

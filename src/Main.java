@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         
-    Cabeçalho cabecalho = new Cabeçalho();
+    Cabecalho cabecalho = new Cabecalho();
     Questao quiz = new Questao();
 
     cabecalho.infos();
