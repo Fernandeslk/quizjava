@@ -11,7 +11,7 @@ public class Main {
 
         questoes.add(new Questao(
                 "1) Qual a função do radiador?",
-                "a) Manter a temperatura do carro estável.",
+                "a) Manter a temperatura do carro estável",
                 "b) Responsável pela mistura ar/combustível.",
                 "c) Fornecer energia elétrica para o motor do veículo.",
                 "d) Resfriar o fluido de ar-condicionado do veículo.",
