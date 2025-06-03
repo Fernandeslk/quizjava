@@ -1,13 +1,22 @@
-import java.util.Scanner;
-
 public class Questao {
-    String pergunta = "Qual a função do radiador?";
-    String opcaoA = "a) Manter a temperatura do carro estável.";
-    String opcaoB = "b) Responsável pela mistura ar/combustivel.";
-    String opcaoC = "c) Fornecer energia elétrica para o motor do veículo.";
-    String opcaoD = "d) Resfriar o fluido de ar-condicionado do veículo.";
-    String opcaoE = "e) Manter a temperatura do motor do veículo muito alta para melhorar seu desempenho.";
-    String correta = "a";
+    String pergunta;
+    String opcaoA;
+    String opcaoB;
+    String opcaoC;
+    String opcaoD;
+    String opcaoE;
+    String correta;
+
+    public Questao(String pergunta, String opcaoA, String opcaoB, String opcaoC,
+                   String opcaoD, String opcaoE, String correta) {
+        this.pergunta = pergunta;
+        this.opcaoA = opcaoA;
+        this.opcaoB = opcaoB;
+        this.opcaoC = opcaoC;
+        this.opcaoD = opcaoD;
+        this.opcaoE = opcaoE;
+        this.correta = correta;
+    }
 
     public boolean isCorreta(String resposta){
         if(resposta.equalsIgnoreCase(this.correta)){
@@ -22,29 +31,8 @@ public class Questao {
         }
     }
 
-    public String leiaResposta() {
-        Scanner ler = new Scanner(System.in);
-        String resp;
-        do {
-            System.out.println("Digite a resposta: ");
-            resp = ler.next();
-        } while (!respostaValida(resp));
-        return resp;
-    }
-
-    private boolean respostaValida(String resp){
-        if(resp.equalsIgnoreCase("A") || resp.equalsIgnoreCase("B") || resp.equalsIgnoreCase("C") ||
-                resp.equalsIgnoreCase("D") || resp.equalsIgnoreCase("E")){
-            return true;
-        }
-        System.out.println("Resposta inválida! Digite opção A, B, C, D ou E. ");
-        System.out.println("");
-        return false;
-    }
-
     public void escrevaQuestao(){
         System.out.println(this.pergunta);
-        System.out.println();
         System.out.println(this.opcaoA);
         System.out.println(this.opcaoB);
         System.out.println(this.opcaoC);
